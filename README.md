@@ -1,5 +1,5 @@
  ## Desafios: Exercícios
-#### Projeto : aluragames
+#### Projeto : carrinho-compras
 #### Data    : 19/09/2024
 
 *Uso do Node.js*
