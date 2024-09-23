@@ -11,17 +11,23 @@ function adicionar() {
     let valor = quantidade * preco;
     valorCarrinho = valorCarrinho + valor;
 
-    let carrinho = document.getElementById('lista-produtos');
-    carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos" id="lista-produtos">
-        <section class="carrinho__produtos__produto">
-          <span class="texto-azul">${quantidade}x</span> ${descricao} <span class="texto-azul">R$${valor}</span>
-        </section>
-      </section>`
+    if (quantidade!=0) {
 
-    let carrinhoTotal = document.getElementById('valor-total');
-    carrinhoTotal.textContent = `R$ ${valorCarrinho} `;
-    document.getElementById('quantidade').value = 0;
-    
+      let carrinho = document.getElementById('lista-produtos');
+      carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos" id="lista-produtos">
+      <section class="carrinho__produtos__produto">
+      <span class="texto-azul">${quantidade}x</span> ${descricao} <span class="texto-azul">R$${valor}</span>
+      </section>
+      </section>`
+      
+      let carrinhoTotal = document.getElementById('valor-total');
+      carrinhoTotal.textContent = `R$ ${valorCarrinho} `;
+      document.getElementById('quantidade').value = 0;
+      
+    } else {
+      alert("Informe a quantidade!");
+    }
+
 }
 
 function limpar() {
